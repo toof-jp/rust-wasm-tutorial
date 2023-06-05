@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <script src='./rust_wasm_tutorial.js'></script>
+
+    <script>
+      const { add } = wasm_bindgen;
+
+      async function run() {
+        await wasm_bindgen();
+
+        const result = add(new Date());
+        console.log(`${result}`);
+      }
+
+      run();
+    </script>
+  </body>
+</html>
